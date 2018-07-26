@@ -1,0 +1,46 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def shared_pods
+  pod 'Material', '~> 2.7.1’
+  pod 'TPKeyboardAvoiding', '~> 1.2'
+  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire-Synchronous', '~> 4.0'
+
+  pod 'SwiftMessageBar’, '~> 3.1.2’
+  pod 'NVActivityIndicatorView'
+  pod 'RealmSwift'
+  pod 'SpreadsheetView'
+  pod 'FSCalendar'
+  pod 'TwicketSegmentedControl'
+  pod 'PinLayout'
+  pod 'M13Checkbox'
+  pod 'PopupDialog'
+  pod 'SwiftyButton'
+end
+
+target 'arm' do
+  use_frameworks!
+  shared_pods
+
+  pod 'Fabric'
+  pod 'Crashlytics'
+
+  target 'armTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'armUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'arm_develop' do
+  
+  use_frameworks!
+  shared_pods
+
+end

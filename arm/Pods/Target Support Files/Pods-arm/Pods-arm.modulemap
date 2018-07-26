@@ -1,0 +1,6 @@
+framework module Pods_arm {
+  umbrella header "Pods-arm-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_armUITests {
+  umbrella header "Pods-armUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
